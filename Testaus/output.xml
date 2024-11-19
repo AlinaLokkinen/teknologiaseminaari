@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-19T17:20:35.596728" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\35845\Desktop\HaagaHelia\Teknologiat\Seminaari\Testaus\tests">
+<suite id="s1-s1" name="Wikipedia testA" source="C:\Users\35845\Desktop\HaagaHelia\Teknologiat\Seminaari\Testaus\tests\Wikipedia_testA.robot">
+<test id="s1-s1-t1" name="Initial Test" line="6">
+<kw name="Open page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:20:35.811524" level="INFO">Opening browser 'Chrome' to base url 'https://www.wikipedia.fi'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-19T17:20:35.811305" elapsed="1.976803"/>
+</kw>
+<status status="PASS" start="2024-11-19T17:20:35.810716" elapsed="1.977554"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-19T17:20:42.789452" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-19T17:20:37.788696" elapsed="5.000882"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-19T17:20:42.789896" elapsed="2.112085"/>
+</kw>
+<status status="PASS" start="2024-11-19T17:20:35.810078" elapsed="9.092275"/>
+</test>
+<test id="s1-s1-t2" name="Search for robot framework" line="11">
+<kw name="Open page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:20:44.904354" level="INFO">Opening browser 'Chrome' to base url 'https://www.wikipedia.fi'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-19T17:20:44.904169" elapsed="2.013863"/>
+</kw>
+<status status="PASS" start="2024-11-19T17:20:44.903929" elapsed="2.014239"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=searchInput</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-19T17:20:46.918497" elapsed="0.036782"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:20:46.955951" level="INFO">Typing text 'Robot Framework' into text field 'name=search'.</msg>
+<arg>name=search</arg>
+<arg>Robot Framework</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-19T17:20:46.955734" elapsed="0.134366"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-19T17:20:49.091353" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-19T17:20:47.090445" elapsed="2.001024"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:20:49.092250" level="INFO">Sending key(s) ('ENTER',) to name=search element.</msg>
+<msg time="2024-11-19T17:20:49.373537" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-11-19T17:20:49.373622" level="INFO">Releasing special key ENTER.</msg>
+<arg>name=search</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-11-19T17:20:49.091872" elapsed="0.754478"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-19T17:20:51.847690" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-19T17:20:49.846717" elapsed="2.001092"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:20:51.888723" level="INFO">Current page contains text 'Robot Framework'.</msg>
+<arg>Robot Framework</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-19T17:20:51.848148" elapsed="0.040668"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-19T17:20:51.889241" elapsed="2.100645"/>
+</kw>
+<doc>Input text into search field and press enter to search</doc>
+<status status="PASS" start="2024-11-19T17:20:44.903350" elapsed="9.086892"/>
+</test>
+<test id="s1-s1-t3" name="Search with a very long search input" line="23">
+<kw name="Open page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:20:53.991988" level="INFO">Opening browser 'Chrome' to base url 'https://www.wikipedia.fi'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-19T17:20:53.991818" elapsed="1.942453"/>
+</kw>
+<status status="PASS" start="2024-11-19T17:20:53.991602" elapsed="1.942803"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=searchInput</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-19T17:20:55.934700" elapsed="0.015723"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:20:55.950915" level="INFO">Typing text 'Pneumonoultra­mikroskopiko­silikovulkanokonioosi' into text field 'name=search'.</msg>
+<arg>name=search</arg>
+<arg>Pneumonoultra­mikroskopiko­silikovulkanokonioosi</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-19T17:20:55.950725" elapsed="0.140786"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-19T17:20:58.092256" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-19T17:20:56.091844" elapsed="2.000538"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:20:58.093140" level="INFO">Sending key(s) ('ENTER',) to name=search element.</msg>
+<msg time="2024-11-19T17:20:58.375890" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-11-19T17:20:58.375966" level="INFO">Releasing special key ENTER.</msg>
+<arg>name=search</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-11-19T17:20:58.092777" elapsed="0.762516"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-19T17:21:00.856783" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-19T17:20:58.855718" elapsed="2.001186"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:00.894491" level="INFO">Current page contains text 'Pneumonoultra­mikroskopiko­silikovulkanokonioosi on sanasepite'.</msg>
+<arg>Pneumonoultra­mikroskopiko­silikovulkanokonioosi on sanasepite</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-19T17:21:00.857247" elapsed="0.037340"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-19T17:21:02.895106" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-19T17:21:00.894893" elapsed="2.000326"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:02.895867" level="INFO">Typing text 'aklsjflajwiouawoiuraoiwjrakmdwkmdlawueroaiwuroisufdkfjkdsljflskersiewuoaisdalskcmsmclekmfleroiuewroijsdflkdjfdlkfmaklsjflajwiouawoiuraoiwjrakmdwkmdlawueroaiwuroisufdkfjkdsljflskersiewuoaisdalskcmsmclekmfleroiuewroijsdflkdjfdlkfmaklsjflajwiouawoiuraoiwjrakmdwkmdlawueroaiwuroisufdkfjkdsljflskersiewuoaisdalskcmsmclekmfleroiuewroijsdflkdjfdlkfmaklsjflajwiouawoiuraoiwjrakmdwkmdlawueroaiwuroisufdkfjkdsljflskersiewuoaisdalskcmsmclekmfleroiuewroijsdflkdjfdlkfm' into text field 'name=search'.</msg>
+<arg>name=search</arg>
+<arg>aklsjflajwiouawoiuraoiwjrakmdwkmdlawueroaiwuroisufdkfjkdsljflskersiewuoaisdalskcmsmclekmfleroiuewroijsdflkdjfdlkfmaklsjflajwiouawoiuraoiwjrakmdwkmdlawueroaiwuroisufdkfjkdsljflskersiewuoaisdalskcmsmclekmfleroiuewroijsdflkdjfdlkfmaklsjflajwiouawoiuraoiwjrakmdwkmdlawueroaiwuroisufdkfjkdsljflskersiewuoaisdalskcmsmclekmfleroiuewroijsdflkdjfdlkfmaklsjflajwiouawoiuraoiwjrakmdwkmdlawueroaiwuroisufdkfjkdsljflskersiewuoaisdalskcmsmclekmfleroiuewroijsdflkdjfdlkfm</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-19T17:21:02.895638" elapsed="0.403117"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:03.300017" level="INFO">Sending key(s) ('ENTER',) to name=search element.</msg>
+<msg time="2024-11-19T17:21:03.571807" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-11-19T17:21:03.571879" level="INFO">Releasing special key ENTER.</msg>
+<arg>name=search</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-11-19T17:21:03.299683" elapsed="0.733676"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class=cdx-message__content</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-19T17:21:04.033712" elapsed="0.374660"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:04.422977" level="INFO">Current page contains text 'Haku epäonnistui'.</msg>
+<arg>Haku epäonnistui</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-19T17:21:04.408713" elapsed="0.014367"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-19T17:21:06.423958" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-19T17:21:04.423375" elapsed="2.000700"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-19T17:21:06.424415" elapsed="2.118442"/>
+</kw>
+<doc>Input a very long search input into the search field and press enter to search
+First one should work, second one should receive error message that the search input is too long</doc>
+<status status="PASS" start="2024-11-19T17:20:53.991088" elapsed="14.552146"/>
+</test>
+<test id="s1-s1-t4" name="Follow links" line="42">
+<kw name="Open page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:08.545030" level="INFO">Opening browser 'Chrome' to base url 'https://www.wikipedia.fi'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-19T17:21:08.544857" elapsed="1.941555"/>
+</kw>
+<status status="PASS" start="2024-11-19T17:21:08.544624" elapsed="1.941914"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:10.487015" level="INFO">Typing text 'ikea' into text field 'name=search'.</msg>
+<arg>name=search</arg>
+<arg>ikea</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-19T17:21:10.486832" elapsed="0.112607"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:10.600224" level="INFO">Sending key(s) ('ENTER',) to name=search element.</msg>
+<msg time="2024-11-19T17:21:10.895638" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-11-19T17:21:10.895714" level="INFO">Releasing special key ENTER.</msg>
+<arg>name=search</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-11-19T17:21:10.599841" elapsed="0.647574"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:11.248080" level="INFO">Clicking link 'postimyynnillä'.</msg>
+<arg>postimyynnillä</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-19T17:21:11.247868" elapsed="0.380316"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:11.628817" level="INFO">Clicking link 'toisen maailmansodan'.</msg>
+<arg>toisen maailmansodan</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-19T17:21:11.628613" elapsed="0.320208"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-19T17:21:13.949774" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-19T17:21:11.949223" elapsed="2.000682"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:13.974938" level="INFO">Current page contains text 'Ensimmäisen maailmansodan rauhanteko'.</msg>
+<arg>Ensimmäisen maailmansodan rauhanteko</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-19T17:21:13.950276" elapsed="0.024761"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-19T17:21:13.975327" elapsed="2.096617"/>
+</kw>
+<doc>Click links on different pages and make sure they redirect to new pages</doc>
+<status status="PASS" start="2024-11-19T17:21:08.544122" elapsed="7.528127"/>
+</test>
+<status status="PASS" start="2024-11-19T17:20:35.627105" elapsed="40.446361"/>
+</suite>
+<suite id="s1-s2" name="Wikipedia testB" source="C:\Users\35845\Desktop\HaagaHelia\Teknologiat\Seminaari\Testaus\tests\Wikipedia_testB.robot">
+<test id="s1-s2-t1" name="Random article" line="6">
+<kw name="Open page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:16.078769" level="INFO">Opening browser 'Chrome' to base url 'https://www.wikipedia.fi'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-19T17:21:16.078595" elapsed="2.024068"/>
+</kw>
+<status status="PASS" start="2024-11-19T17:21:16.078366" elapsed="2.024416"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=p-interaction</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-19T17:21:18.103171" elapsed="0.017361"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:18.120996" level="INFO">Clicking link 'Satunnainen artikkeli'.</msg>
+<arg>Satunnainen artikkeli</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-19T17:21:18.120834" elapsed="0.735653"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-19T17:21:20.857370" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-19T17:21:18.856807" elapsed="2.000678"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:20.875478" level="INFO">Current page does not contain text 'Suositeltu artikkeli'.</msg>
+<arg>Suositeltu artikkeli</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2024-11-19T17:21:20.857799" elapsed="0.017744"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-19T17:21:22.876078" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-19T17:21:20.875808" elapsed="2.000383"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:22.876685" level="INFO">Clicking link 'Etusivu'.</msg>
+<arg>Etusivu</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-19T17:21:22.876520" elapsed="0.182818"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:23.081658" level="INFO">Current page contains text 'Suositeltu artikkeli'.</msg>
+<arg>Suositeltu artikkeli</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-19T17:21:23.059735" elapsed="0.022019"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-19T17:21:23.082069" elapsed="2.094916"/>
+</kw>
+<doc>Clicks on the "random article" link on the left side of the main page
+Checks to see the front page "Suositeltu artikkeli" is no longer visible after clicking on link
+Returns to the front page and checks "Suositeltu artikkeli" is visible again</doc>
+<status status="PASS" start="2024-11-19T17:21:16.077748" elapsed="9.099828"/>
+</test>
+<test id="s1-s2-t2" name="Shortened URL" line="21">
+<kw name="Open page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:25.179594" level="INFO">Opening browser 'Chrome' to base url 'https://www.wikipedia.fi'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-19T17:21:25.179425" elapsed="2.012853"/>
+</kw>
+<status status="PASS" start="2024-11-19T17:21:25.179181" elapsed="2.013220"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:27.192836" level="INFO">Clicking link 'Lyhennä URL-osoite'.</msg>
+<arg>Lyhennä URL-osoite</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-19T17:21:27.192673" elapsed="0.054960"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=ooui-1</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-19T17:21:27.248144" elapsed="0.633639"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:27.896749" level="INFO">Current page contains text 'Voit myös käyttää tätä vaihtoehtoista URL-osoitetta:'.</msg>
+<arg>Voit myös käyttää tätä vaihtoehtoista URL-osoitetta:</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-19T17:21:27.882227" elapsed="0.014619"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-19T17:21:29.898424" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-19T17:21:27.897241" elapsed="2.001298"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-19T17:21:29.898853" elapsed="2.099653"/>
+</kw>
+<doc>Checks to see if a pop up is rendered when "Shortened URL" link is clicked</doc>
+<status status="PASS" start="2024-11-19T17:21:25.178737" elapsed="6.820089"/>
+</test>
+<test id="s1-s2-t3" name="Download PDF" line="31">
+<kw name="Open page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:32.000690" level="INFO">Opening browser 'Chrome' to base url 'https://www.wikipedia.fi'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-19T17:21:32.000515" elapsed="1.953115"/>
+</kw>
+<status status="PASS" start="2024-11-19T17:21:32.000274" elapsed="1.953474"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:33.954188" level="INFO">Clicking link 'Satunnainen artikkeli'.</msg>
+<arg>Satunnainen artikkeli</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-19T17:21:33.954025" elapsed="0.853732"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:34.808341" level="INFO">Clicking link 'Lataa PDF-tiedostona'.</msg>
+<arg>Lataa PDF-tiedostona</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-19T17:21:34.808153" elapsed="0.521475"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[contains(text(), "Lataa")]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-19T17:21:35.330020" elapsed="0.015674"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-19T17:21:35.346304" level="INFO">Clicking element '//span[contains(text(), "Lataa")]'.</msg>
+<arg>//span[contains(text(), "Lataa")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-19T17:21:35.346076" elapsed="3.467454"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-19T17:21:40.814397" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-19T17:21:38.813946" elapsed="2.000564"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-19T17:21:40.814839" elapsed="2.108475"/>
+</kw>
+<doc>Downloads a page as a PDF
+Click on "random article" to download something other than the front page</doc>
+<status status="PASS" start="2024-11-19T17:21:31.999799" elapsed="10.923921"/>
+</test>
+<status status="PASS" start="2024-11-19T17:21:16.074803" elapsed="26.849840"/>
+</suite>
+<status status="PASS" start="2024-11-19T17:20:35.598276" elapsed="67.327567"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s1" name="Wikipedia testA">Tests.Wikipedia testA</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s2" name="Wikipedia testB">Tests.Wikipedia testB</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
